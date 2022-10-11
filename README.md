@@ -6,25 +6,19 @@
 * [2. Resumo do projeto](#2-resumo-do-projeto)
 * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
 * [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínimos do projeto](#5-critérios-de-aceitação-mínimos-do-projeto)
-* [6. Pistas, tips e leituras complementares](#6-pistas-tips-e-leituras-complementares)
+* [5. Critérios de aceitação mínimos do projeto](#5-critérios-mínimos-de-aceitação-do-projeto)
+* [6. Hacker Edition](#6-hacker-edition)
+* [7. Pistas, tips e leituras complementares](#7-pistas-tips-e-leituras-complementares)
 
 ***
 
 ## 1. Prefácio
 
-Um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma
-interface em que se possa realizar pedidos utilizando um _tablet_, e enviá-los
-para a cozinha para que sejam preparados de forma ordenada e eficiente.
-
-Este projeto tem duas áreas: interface (cliente) e API (servidor). Nosso
-cliente nos pediu para desenvolver uma interface que se integre com a API
-que outra equipe de desenvolvedoras está trabalhando simultaneamente.
-
-[React](https://reactjs.org/) e [Angular](https://angular.io/)
-são alguns dos _frameworks_ e _bibliotecas_ de JavaScript mais usados
-na área de desenvolvimento ao redor do mundo e existe uma razão para isso.
-No contexto do navegador, [_manter a interface sincronizada com o estado é
+[React](https://reactjs.org/), [Angular](https://angular.io/) e
+[Vue](https://vuejs.org/) são alguns dos _frameworks_ e _bibliotecas_ de
+JavaScript mais usados na área de desenvolvimento ao redor do mundo e existe uma
+razão para isso. No contexto do navegador, [_manter a interface sincronizada com
+o estado é
 difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
 Ao eleger um _framework_ ou _biblioteca_ para nossa interface, nos apoiamos em
 uma série de convenções e implementações _testadas_ e _documentadas_ para
@@ -43,11 +37,18 @@ você for trabalhar.
 
 ## 2. Resumo do projeto
 
+Um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma
+interface em que se possa realizar pedidos utilizando um _tablet_, e enviá-los
+para a cozinha para que sejam preparados de forma ordenada e eficiente.
+
+![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+
+Este projeto tem duas áreas: interface (cliente) e API (servidor). Nosso
+cliente nos pediu para desenvolver uma interface que se integre com a API.
+
 Desta vez temos um projeto 100% por demanda. Você sempre pode (e deve) fazer
 sugestões de melhora e mudança, mas muitas vezes trabalhará em um projeto em que
 primeiro deve se assegurar de cumprir os requisitos.
-
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
 
 Estas são as informações que temos do cliente:
 
@@ -82,6 +83,10 @@ Estas são as informações que temos do cliente:
 >|Bebida gaseificada 500ml   |     7|
 >|Bebida gaseificada 750ml   |    10|
 >
+> **Importante:** Os clientes podem escolher entre hambúrgueres de carne bovina,
+> frango ou vegetariano. Além disso, por um adicional de R\$ 1,00 , eles podem
+> adicionar queijo **ou** ovo.
+>
 >Nossos clientes são bastante indecisos, por isso é muito comum que eles mudem o
 >seu pedido várias vezes antes de finalizar.
 
@@ -91,13 +96,13 @@ adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
 
 ![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
 
-Além disso a cliente nos deu um [link da documentação](https://laboratoria.github.io/burger-queen-api/)
+Além disso a cliente nos deu um [link da documentação](https://lab-api-bq.herokuapp.com/api-docs/)
 que especifica o comportamento esperado da API que iremos expor por HTTP.
 Lá podemos encontrar todos os detalhes dos _endpoints_, como por exemplo
 que parâmetros esperam, o que devem responder, etc.
 
 O objetivo principal é aprender a construir uma _interface web_ usando o
-_framework_ escolhido (React ou Angular). Esses framework front-end ataca
+_framework_ React. Esses framework front-end ataca
 o seguinte problema: **como manter a interface e estado sincronizados**.
 Portanto, esta experiência espera familiarizá-la com o conceito de _estado da
 tela_, e como cada mudança no estado vai refletir na interface (por exemplo,
@@ -125,10 +130,10 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
   <details><summary>Links</summary><p>
 
   * [Intro a CSS](https://curriculum.laboratoria.la/pt/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/pt_BR/docs/Web/CSS/CSS_Selectors)
+  * [CSS Selectors - MDN](https://developer.mozilla.org//pt-BR/docs/Web/CSS/CSS_Selectors)
 </p></details>
 
-- [ ] **Modelo de caixa (box model): borda, margem, preenchimento**
+- [ ] **Empregar o modelo de caixa (box model): borda, margem, preenchimento**
 
   <details><summary>Links</summary><p>
 
@@ -139,7 +144,7 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
   * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
 </p></details>
 
-- [ ] **Uso de flexbox em CSS**
+- [ ] **Uso de flexbox en CSS**
 
   <details><summary>Links</summary><p>
 
@@ -160,12 +165,12 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
   <details><summary>Links</summary><p>
 
-  * [CSS media queries - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries)
+  * [CSS media queries - MDN](https://developer.mozilla.org/pt-BR/docs/web/css/media_queries/using_media_queries)
 </p></details>
 
 ### JavaScript
 
-- [ ] **Testes unitários (unit tests)**
+- [ ] **Testes unitários**
 
   <details><summary>Links</summary><p>
 
@@ -179,14 +184,14 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
   * [Testando Código Assíncrono - Documentação oficial](https://jestjs.io/docs/pt-BR/asynchronous)
 </p></details>
 
-- [ ] **Uso de mocks e espiões**
+- [ ] **Mocking**
 
   <details><summary>Links</summary><p>
 
   * [Simulações Manuais - Documentação oficial](https://jestjs.io/docs/pt-BR/manual-mocks)
 </p></details>
 
-- [ ] **Módulos de ECMAScript (ES modules)**
+- [ ] **Uso ES modules**
 
   <details><summary>Links</summary><p>
 
@@ -196,9 +201,9 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 - [ ] **Uso de linter (ESLINT)**
 
-- [ ] **Uso de identificadores descritivos (Nomenclatura e Semântica)**
+- [ ] **Uso de identificadores descritivos (Nomenclatura | Semântica)**
 
-### Controle de Versões (Git e GitHub)
+### Git e GitHub
 
 - [ ] **Git: Instalação e configuração**
 
@@ -221,11 +226,11 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 ### HTTP
 
-- [ ] **Consulta ou solicitação (request) e resposta (response).**
+- [ ] **Solicitações o requisições (request) e respostas (response).**
 
   <details><summary>Links</summary><p>
 
-  * [Visão geral do protocolo HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview)
+  * [Uma visão geral do HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Overview)
   * [Mensagens HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Messages)
 </p></details>
 
@@ -250,7 +255,7 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
   * [Métodos de requisição HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
 </p></details>
 
-- [ ] **Códigos de status de HTTP**
+- [ ] **Codigos de status de HTTP**
 
   <details><summary>Links</summary><p>
 
@@ -272,206 +277,29 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
   * [Cross-Origin Resource Sharing (CORS) - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
 </p></details>
 
-### Angular
+### react
 
-- [ ] **Components & templates**
+- [ ] **jsx**
 
-  <details><summary>Links</summary><p>
+- [ ] **components**
 
-  * [Angular Components Overview - Documentação oficial (em inglês)](https://angular.io/guide/component-overview)
-  * [Introduction to components and templates - Documentação oficial (em inglês)](https://angular.io/guide/architecture-components#introduction-to-components)
-</p></details>
+- [ ] **events**
 
-- [ ] **Diretivas estruturais (ngIf / ngFor)**
+- [ ] **lists-and-keys**
 
-  <details><summary>Links</summary><p>
+- [ ] **conditional-rendering**
 
-  * [Writing structural directives - Documentação oficial (em inglês)](https://angular.io/guide/structural-directives)
-</p></details>
+- [ ] **lifting-up-state**
 
-- [ ] **@Input | @Output**
+- [ ] **hooks**
 
-  <details><summary>Links</summary><p>
+- [ ] **css-modules**
 
-  * [Component interaction - Documentação oficial (em inglês)](https://angular.io/guide/component-interaction#component-interaction)
-</p></details>
-
-- [ ] **Criação e uso de serviços**
-
-  <details><summary>Links</summary><p>
-
-  * [Providing services - Documentação oficial (em inglês)](https://angular.io/guide/architecture-services#providing-services)
-</p></details>
-
-- [ ] **Gerenciamento de rotas**
-
-  <details><summary>Links</summary><p>
-
-  * [In-app navigation: routing to views - Documentação oficial (em inglês)](https://angular.io/guide/router)
-</p></details>
-
-- [ ] **Criação e uso de Observables**
-
-  <details><summary>Links</summary><p>
-
-  * [Observables in Angular - Documentação oficial (em inglês)](https://angular.io/guide/observables-in-angular)
-</p></details>
-
-- [ ] **Uso de HttpClient**
-
-  <details><summary>Links</summary><p>
-
-  * [Communicating with backend services using HTTP - Documentação oficial (em inglês)](https://angular.io/guide/http)
-</p></details>
-
-- [ ] **Estilos de componentes (ngStyle / ngClass)**
-
-  <details><summary>Links</summary><p>
-
-  * [Template syntax - Documentação oficial (em inglês)](https://angular.io/guide/template-syntax#built-in-directives)
-</p></details>
-
-### React
-
-- [ ] **JSX**
-
-  <details><summary>Links</summary><p>
-
-  * [Introduzindo JSX - Documentação oficial](https://pt-br.reactjs.org/docs/introducing-jsx.html)
-</p></details>
-
-- [ ] **Componentes e propriedades (props)**
-
-  <details><summary>Links</summary><p>
-
-  * [Componentes e propriedades - Documentação oficial](https://pt-br.reactjs.org/docs/components-and-props.html)
-</p></details>
-
-- [ ] **Manipulação de eventos**
-
-  <details><summary>Links</summary><p>
-
-  * [Manipulando eventos - Documentação oficial](https://pt-br.reactjs.org/docs/handling-events.html)
-</p></details>
-
-- [ ] **Listas e keys**
-
-  <details><summary>Links</summary><p>
-
-  * [Listas e chaves - Documentação oficial](https://pt-br.reactjs.org/docs/lists-and-keys.html)
-</p></details>
-
-- [ ] **Renderização condicional**
-
-  <details><summary>Links</summary><p>
-
-  * [Renderização condicional - Documentação oficial](https://pt-br.reactjs.org/docs/conditional-rendering.html)
-</p></details>
-
-- [ ] **Elevação de estado**
-
-  <details><summary>Links</summary><p>
-
-  * [Elevação de estado - Documentação oficial](https://pt-br.reactjs.org/docs/lifting-state-up.html)
-</p></details>
-
-- [ ] **Hooks**
-
-  <details><summary>Links</summary><p>
-
-  * [Introduzindo Hooks - Documentação oficial](https://pt-br.reactjs.org/docs/hooks-intro.html)
-</p></details>
-
-- [ ] **CSS modules**
-
-  <details><summary>Links</summary><p>
-
-  * [Adding a CSS Modules Stylesheet - Documentação de Create React App (em inglês)](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
-</p></details>
-
-- [ ] **React Router**
-
-  <details><summary>Links</summary><p>
-
-  * [Quick Start - Documentação oficial (em inglês)](https://reactrouter.com/web/guides/quick-start)
-</p></details>
-
-### Vue
-
-- [ ] **Instância de Vue.js**
-
-  <details><summary>Links</summary><p>
-
-  * [A Instância Vue - Documentação oficial](https://br.vuejs.org/v2/guide/instance.html)
-</p></details>
-
-- [ ] **Dados e métodos**
-
-  <details><summary>Links</summary><p>
-
-  * [Dados e métodos - Documentação oficial](https://br.vuejs.org/v2/guide/instance.html#Dados-e-Metodos)
-</p></details>
-
-- [ ] **Uso e criação de componentes**
-
-  <details><summary>Links</summary><p>
-
-  * [Conceitos Básicos de Componentes - Documentação oficial](https://br.vuejs.org/v2/guide/components.html)
-</p></details>
-
-- [ ] **Props**
-
-  <details><summary>Links</summary><p>
-
-  * [Passando dados aos componentes filhos com Props - Documentação oficial](https://br.vuejs.org/v2/guide/components.html#Passando-Dados-aos-Filhos-com-Props)
-</p></details>
-
-- [ ] **Diretivas (v-bind | v-model)**
-
-  <details><summary>Links</summary><p>
-
-  * [v-bind - Documentação oficial](https://br.vuejs.org/v2/api/#v-bind)
-  * [Binding/Interligações em Formulários - Documentação oficial](https://br.vuejs.org/v2/guide/forms.html)
-</p></details>
-
-- [ ] **Iteração (v-for)**
-
-  <details><summary>Links</summary><p>
-
-  * [Array em elementos com v-for - Documentação oficial](https://br.vuejs.org/v2/guide/list.html#Array-em-Elementos-com-v-for)
-</p></details>
-
-- [ ] **Eventos (v-on)**
-
-  <details><summary>Links</summary><p>
-
-  * [Manipulação de eventos - Documentação oficial](https://br.vuejs.org/v2/guide/events.html)
-</p></details>
-
-- [ ] **Dados Computados e Observadores**
-
-  <details><summary>Links</summary><p>
-
-  * [Dados Computados e Observadores](https://br.vuejs.org/v2/guide/computed.html)
-</p></details>
-
-- [ ] **Routing**
-
-  <details><summary>Links</summary><p>
-
-  * [Getting Started - Documentação oficial de Vue Router](https://router.vuejs.org/guide/#html)
-</p></details>
-
-- [ ] **Classes e Estilos**
-
-  <details><summary>Links</summary><p>
-
-  * [Interligações de Classe e Estilo - Documentação oficial](https://br.vuejs.org/v2/guide/class-and-style.html)
-</p></details>
+- [ ] **routing**
 
 ### user-centricity
 
-- [ ] **Desenhar e desenvolver um produto ou serviço colocando as usuárias no centro**
+- [ ] **Desenhar a aplicação pensando e entendendo a usuária**
 
 ### product-design
 
@@ -485,11 +313,8 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 ## 4. Considerações gerais
 
-Este projeto deve ser feito em pares. Lembre-se que deverá consumir uma
-API que suas companheiras desenvolverão, entretanto, não deve esperar que esta API
-esteja terminada para começar a codar. Pode utilizar ferramentas
-como [nock](https://github.com/nock/nock), [json-server](https://www.npmjs.com/package/json-server)
-ou [mockoon](https://mockoon.com) para mockar a API.
+Este projeto deve ser feito em pares. Lembre-se que deverá consumir a
+API [Burger Queen API](https://lab-api-bq.herokuapp.com/api-docs/).
 
 Trabalhe integralmente uma história de usuário antes de passar para a próxima.
 Cumpra todas as histórias possíveis dentro do tempo especificado.
@@ -497,8 +322,7 @@ Cumpra todas as histórias possíveis dentro do tempo especificado.
 A lógica do projeto deve ser totalmente implementada em JavaScript (ES6 +), HTML
 e CSS e empacotada de forma automatizada.
 
-Neste projeto você deve usar [React](https://reactjs.org/) ou
-[Angular](https://angular.io/)).
+Neste projeto você deve usar [React](https://beta.reactjs.org/).
 
 O aplicativo deve ser um _Single Page App_. Os pedidos serão enviados por meio
 de um _tablet_, mas **não queremos um aplicativo nativo**, mas sim um aplicativo
@@ -507,14 +331,11 @@ Web que seja **mobile-first**.
 Precisamos pensar bem sobre o UX para aqueles que vão receber os pedidos, o
 tamanho e a aparência dos botões, a visibilidade do estado atual do pedido, etc.
 
-A aplicação deve seguir 80% ou mais das pontuações de Performance, Progressive
-Web App, Accessibility e Best Practices do Lighthouse.
-
 O aplicativo deve fazer uso de `npm-scripts` e ter scripts `start`, `test`,
 `build` e `deploy`, que são responsáveis por inicializar, rodar os testes,
 empacotar e fazer deploy do aplicativo, respectivamente.
 
-Os testes unitários devem cobrir um mínimo de 90% de _statements_, _functions_,
+Os testes unitários devem cobrir um mínimo de 70% de _statements_, _functions_,
 _lines_ e _branches_.
 
 Por outro lado, vocês devem definir a estrutura das pastas e arquivos que considerem
@@ -531,7 +352,7 @@ este _backlog_ que é o resultado do seu trabalho com o cliente até hoje.
 
 ***
 
-#### [Historia de usuario 1] Garçom/Garçonete deve poder entrar no sistema, caso o admin já lhe tenha dado as credenciais
+#### [História de usuário 1] Garçom/Garçonete deve poder entrar no sistema
 
 Eu, como garçom/garçonete quero entrar no sistema de pedidos.
 
@@ -605,7 +426,7 @@ está pronto para ser entregue ao cliente.
 
 ***
 
-#### [Historia de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir
+#### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir
 
 Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los
 rapidamente aos clientes.
@@ -626,66 +447,59 @@ rapidamente aos clientes.
 
 ***
 
-#### [Historia de usuário 5] Administrador(a) de loja deve administrar seus funcionários
+## 6. Hacker Edition
 
-Eu como administrador(a) de loja quero gerenciar os usuários da
-plataforma para manter atualizado as informações de meus funcionários.
+As seções chamadas Hacker Edition são opcionais. Se você terminou tudo e ainda sobrou tempo, faça essa parte. Assim você poderá aprofundar e exercitar mais sobre os objetivos de aprendizagem do projeto.
 
-##### Critérios de aceitação
+A aplicação deve seguir 80% ou mais das pontuações de Performance, Progressive
+Web App, Accessibility e Best Practices do [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
-* Ver lista de funcionários.
-* Adicionar funcionários.
-* Excluir funcionários.
-* Atualizar dados dos funcionários.
+## 7. Pistas, tips e leituras complementares
+### Primeiros passos
 
-##### Definição de pronto
+1. Faça um _fork_ deste repositório (no GitHub).
 
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Fez _testes_ unitários e, além disso, testou seu produto manualmente.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
+2. Clone seu _fork_ no seu computador:
 
-***
+   ```sh
+   git clone git@github.com:<tu-usuario-de-github>/<cohortid>-burger-queen.git
+   cd <cohortid>-burger-queen
+   ```
 
-#### [História de usuário 6] Administrador(a) de loja deve administrar os produtos
+3. Crie uma branch a partir da `main` para começar a trabalhar. Por exemplo:
 
-Eu como administrador(a) de loja quero gerenciar os produtos
-para manter atualizado o menu.
+   ```sh
+   git checkout -b develop
+   ```
 
-##### Critérios de aceitação
-
-* Ver lista de produtos.
-* Adicionar produtos.
-* Excluir produtos.
-* Atualizar dados de produtos.
-
-##### Definição de pronto
-
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Fez _testes_ unitários e, além disso, testou seu produto manualmente.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
+4. Veja o video de configuração inicial para você poder começar com o _front-end_ :wink:. 
 
 ***
-
-## 6. Pistas, tips e leituras complementares
 
 ### Frameworks / bibliotecas
 
 * [React](https://reactjs.org/)
-* [Angular](https://angular.io/)
+* [React beta - versão em construção usando Hooks ](https://beta.reactjs.org/)
+* [Create React App](https://create-react-app.dev/docs/getting-started)
+* [Configuração inicial (vídeo)](https://youtu.be/38iZjr-jH5E)
 
-### ferramentas
+### Ferramentas
 
 * [npm-scripts](https://docs.npmjs.com/misc/scripts)
 * [Babel](https://babeljs.io/)
 * [webpack](https://webpack.js.org/)
-* [json-server](https://www.npmjs.com/package/json-server)
-* [mockoon](https://mockoon.com)
-* [nock](https://github.com/nock/nock)
+
+### Rotas
+
+* [React Router](https://reactrouter.com/web/guides/quick-start)
 
 ### PWA
 
 * [Seu primeiro Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
 * [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-* [Usando Service Workers - MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+
+### Deploy
+
+* Veja a documentação [de deploy do Create React App](https://create-react-app.dev/docs/deployment).
+Você pode utilizar qualquer um dos serviços listados na documentação,
+sendo recomendado o Firebase, Vercel, Netlify, Github Pages ou Heroku.
