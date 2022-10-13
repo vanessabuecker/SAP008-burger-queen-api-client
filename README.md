@@ -314,7 +314,7 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 ## 4. Considerações gerais
 
 Este projeto deve ser feito em pares. Lembre-se que deverá consumir a
-API [Burger Queen API](https://lab-api-bq.herokuapp.com/api-docs/).
+API [Burger Queen API](https://lab-api-bq.up.railway.app/api-docs/).
 
 Trabalhe integralmente uma história de usuário antes de passar para a próxima.
 Cumpra todas as histórias possíveis dentro do tempo especificado.
