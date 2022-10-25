@@ -1,0 +1,48 @@
+.form {
+  display:block;
+  width: 50%;
+  height: 10vh;
+  }
+  
+  #radiobutton{
+    width: 20px;
+    margin-left: 15px;
+  }
+
+  .radio-button{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+  }
+  
+  .radio-div{
+    display: flex;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 800px) and (min-width: 767px) {
+    .form {
+      width: 100%;
+      display:block;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    #radiobutton{
+      width: 20px;
+      margin-left: 15px;
+    }
+  
+    .radio-button{
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      margin-top: 3%;
+    }
+    
+    .radio-div{
+      display: flex;
+      justify-content: center;
+    }
+  }
