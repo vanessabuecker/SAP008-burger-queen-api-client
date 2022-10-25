@@ -15,8 +15,8 @@ function Register() {
                 <Logo />
             </div>
             <div className="text-links">
-                <a href='/login'>Login</a>
-                <a href='/register'>Criar conta</a>
+                <a className="login-register" href='/login'>Login</a>
+                <a className="criar-register" href='/register'>Criar conta</a>
             </div>
 
             <div className="box-getstart">
