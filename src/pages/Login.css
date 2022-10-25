@@ -29,12 +29,27 @@ body {
     font-size: 1.7rem;
 }
 
-a {
+.login {
     text-decoration: none;
     color: rgb(24, 24, 24);
     border-bottom: 5px solid rgb(103, 31, 0)
 }
 
+.criar {
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+}
+
+.login-register{
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+}
+
+.criar-register{
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+    border-bottom: 5px solid rgb(103, 31, 0)
+}
 .form-login {
     width: 100%;
     height: 100%;

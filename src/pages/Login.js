@@ -15,8 +15,8 @@ function Login() {
                 <Logo />
             </div>
             <div className="text-links">
-                <a href='/login'>Login</a>
-                <a href='/register'>Criar conta</a>
+                <a className="login" href='/login'>Login</a>
+                <a className="criar" href='/register'>Criar conta</a>
             </div>
 
             <InputLogin />
