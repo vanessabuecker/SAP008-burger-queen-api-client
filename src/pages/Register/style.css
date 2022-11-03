@@ -1,0 +1,57 @@
+#button-register {
+    margin-top: 7%;
+    margin-bottom: 1%;
+}
+
+.createaccount-register {
+    text-decoration: none;
+    color: rgb(24, 24, 24);
+    font-weight: 00;
+    border-bottom: 5px solid rgb(103, 31, 0)
+}
+
+.form {
+    display: block;
+    width: 50%;
+    height: 10vh;
+}
+
+#kitchen,
+#hall {
+    width: 15px;
+    margin-left: 15px;
+}
+
+.radio {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 767px) {
+    .form {
+        width: 100%;
+        display: block;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #radiobutton {
+        width: 20px;
+        margin-left: 15px;
+    }
+
+    .radio-button {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        margin-top: 3%;
+    }
+
+    .radio-div {
+        display: flex;
+        justify-content: center;
+    }
+}

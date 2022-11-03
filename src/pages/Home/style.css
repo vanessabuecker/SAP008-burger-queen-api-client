@@ -1,46 +1,42 @@
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.box-getstart{
+.box-getstart {
     height: 100%;
     width: 100%;
-    margin-top: 8%;
+    margin-top: 7%;
     text-align: center;
 }
 
-.container-getstart{
+.container-getstart {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
-.button-style{
+.button-style {
+    width: 28%;
+    height: 2.5rem;
+    margin-top: 20%;
     background-color: rgb(117, 43, 0);
     color: beige;
     border: none;
-    width: 28%;
-    height: 3rem;
     border-radius: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    position: absolute;
     cursor: pointer;
-    bottom: 3%;
+    transition: filter 0.2s;
 }
-.button-style:hover{
-background-color: rgb(85, 43, 1);
+
+.button-style:hover {
+    filter: brightness(0.9);
 }
 
 @media only screen and (max-width: 900px) and (min-width: 768px) {
-    .button-style{
-        bottom: 10%;
+    .button-style {
+        margin-top: 35rem;
     }
 
-    
-    
+    .box-getstart {
+        margin-top: 16%;
+    }
 
 }
