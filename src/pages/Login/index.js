@@ -20,8 +20,8 @@ function Login() {
                 if (res.code === 404) {
                     alert("Usuário não encontrado");
                 }
-                
-               else if (res.code === 400) {
+
+                else if (res.code === 400) {
                     alert("E-mail ou senha inválidos");
                 }
 
@@ -32,7 +32,7 @@ function Login() {
                     localStorage.setItem("role", res.role);
 
                     if (res.role === "hall") {
-                        navigate("/hall");
+                        navigate("/homepage");
                     }
                     else if (res.role === "kitchen") {
                         navigate("/kitchen");
@@ -61,7 +61,6 @@ function Login() {
                     <button onClick={validate} className="button-style" id="button-login">Entrar</button>
                 </div>
             </form>
-
         </div>
     </>
     )

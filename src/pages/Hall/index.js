@@ -1,35 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { token } from "../../Authentication/Token";
 import MenuItems from "../../components/Menu/MenuItems";
+import Menu from "../../components/Menu/Menu";
 import './style.css'
 
 function Hall() {
 
-    const [datas, setDatas] = useState([])
+    const baseUrl = 'https://lab-api-bq.herokuapp.com';
+    const apiProducts = `${baseUrl}/products/`
+    const getOptions = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: token("token"),
+        },
+    };
 
-    useEffect(() => {
-        fetch('https://lab-api-bq.herokuapp.com/products', {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": token("token"),
-            },
-        })
-            .then(response => response.json())
-            .then(data => {
-                setDatas(data)
-                console.log(data)
+    const fetchAllProducts = async () => (
+        fetch(apiProducts, getOptions)
+            .then((res) => res.json())
+            .then((data) => {
+                return data;
             })
-    }, [])
+    )
+
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        fetchAllProducts()
+            .then((products) => setProducts(products))
+    })
 
     return (
-        datas.map(repo => {
-
-            return (
-                <MenuItems name={repo.name} price={repo.price} flavor={repo.flavor} />
-
-            )
-        })
+        <>
+            <Menu />
+            <div className="background-menu">
+            {products.map(product => MenuItems(product))}
+            </div>
+        </>
     )
 }
 

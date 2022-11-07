@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{  
+    background-color: #ffeeb2;
+}
+
 body,
 input,
 button {
@@ -11,3 +15,4 @@ button {
     font-family: 'Quicksand', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
+

@@ -21,17 +21,17 @@ function Register() {
         createNewUser(name, email, password, role)
             .then((res) => {
                 if (res.code === 403) {
-                    console("Email já cadastrado!");
+                    alert("Email já cadastrado!");
                 } else {
                     localStorage.setItem("token", res.token);
                     localStorage.setItem("id", res.id);
                     localStorage.setItem("email", res.email);
                     localStorage.setItem("role", res.role);
-                    console.log(localStorage.setItem)
 
                     if (res.role === "hall") {
-                        navigate("/hall");
+                        navigate("/homepage");
                     }
+
                     else if (res.role === "kitchen") {
                         navigate("/kitchen");
                     }
@@ -43,7 +43,7 @@ function Register() {
 
     const validation = () => {
         if (!emailValidation(email)) {
-            alert('Digite um email válido.')
+            alert('Digite um e-mail válido.')
         }
         if (!passwordValidation(password)) {
             alert('Digite uma senha válida')
@@ -57,9 +57,9 @@ function Register() {
                 <form className="form" onSubmit={buttonSubmit}>
                     <div className="radio">
                         <input type="radio" name="role" value="kitchen" id="kitchen" className="role" onChange={(e) => setRole(e.target.value)} />
-                        <label htmlFor="kitchen"><span></span>Cozinha</label>
+                        <label htmlFor="kitchen">Cozinha</label>
                         <input type="radio" name="role" value="hall" id="hall" className="role" onChange={(e) => setRole(e.target.value)} />
-                        <label htmlFor="hall"><span></span>Atendimento</label>
+                        <label htmlFor="hall">Atendimento</label>
                     </div>
                     <input type="text" placeholder="Name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
                     <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -70,6 +70,6 @@ function Register() {
         </div>
     </>
     )
-}   
+}
 
 export default Register;
