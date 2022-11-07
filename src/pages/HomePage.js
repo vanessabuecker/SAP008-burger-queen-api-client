@@ -4,18 +4,24 @@ import Coffee from "../components/coffee";
 import Burguer from "../components/burguer";
 
 function HomePage() {
+    const handleClick = () => {
+        window.open('/hall', '_self')
+    }
+
     return (
 
-        <div>
-            <div className="caixa">Café da manhã 
+        <div className="box-homepage">
+            <div className="box-coffeebreak" onClick={handleClick}>Café da manhã
                 <Coffee />
             </div>
-            <div className="outros">Outros
+
+            <div className="anothers">Outros
                 <Burguer />
             </div>
         </div>
-        
     )
-}
 
+
+
+}
 export default HomePage;

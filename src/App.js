@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Hall from "./pages/Hall";
 import Kitchen from "./pages/Kitchen";
+import HomePage from "./pages/HomePage";
 
 function App() {
 
@@ -26,6 +27,10 @@ function App() {
 
         <Route path='/hall'>
           <Hall />
+        </Route>
+
+        <Route path='/homepage'>
+          <HomePage />
         </Route>
 
         <Route path='/register'>
