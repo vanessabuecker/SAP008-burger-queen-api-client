@@ -1,7 +1,7 @@
 import React from "react";
-import './HomePage.css';
-import Coffee from "../components/coffee";
-import Burguer from "../components/burguer";
+import './style.css';
+import coffee from '../../imgs/coffee.png'
+import burger from "../../imgs/burguer.png"
 
 function HomePage() {
     const handleClick = () => {
@@ -12,16 +12,14 @@ function HomePage() {
 
         <div className="box-homepage">
             <div className="box-coffeebreak" onClick={handleClick}>Café da manhã
-                <Coffee />
+                <img src={coffee} className="img-homepage" alt="Imagem de uma xícará de café" />
             </div>
 
             <div className="anothers">Outros
-                <Burguer />
+                <img src={burger} className="img-homepage" alt="Imagem de um hambúrguer" />
             </div>
         </div>
     )
-
-
-
 }
+
 export default HomePage;

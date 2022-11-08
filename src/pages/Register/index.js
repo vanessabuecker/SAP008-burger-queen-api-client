@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createNewUser } from "../../Authentication/Auth";
 import Nav from "../../components/Nav";
+import Input from "../../components/Input/Input";
+import Button from "../../components/Button";
 import { emailValidation, passwordValidation } from "../../Authentication/Auth";
 
 import './style.css'
@@ -21,7 +23,7 @@ function Register() {
         createNewUser(name, email, password, role)
             .then((res) => {
                 if (res.code === 403) {
-                    alert("Email já cadastrado!");
+                    alert("E-mail já cadastrado!");
                 } else {
                     localStorage.setItem("token", res.token);
                     localStorage.setItem("id", res.id);
@@ -56,15 +58,16 @@ function Register() {
             <div className="container-getstart">
                 <form className="form" onSubmit={buttonSubmit}>
                     <div className="radio">
-                        <input type="radio" name="role" value="kitchen" id="kitchen" className="role" onChange={(e) => setRole(e.target.value)} />
+                        
+                        <Input type="radio" name="role" value="kitchen" id="kitchen" className="role" onChange={(e) => setRole(e.target.value)} />
                         <label htmlFor="kitchen">Cozinha</label>
-                        <input type="radio" name="role" value="hall" id="hall" className="role" onChange={(e) => setRole(e.target.value)} />
+                        <Input type="radio" name="role" value="hall" id="hall" className="role" onChange={(e) => setRole(e.target.value)} />
                         <label htmlFor="hall">Atendimento</label>
                     </div>
-                    <input type="text" placeholder="Name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
-                    <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <button onClick={validation} className="button-style" id="button-register">Criar conta</button>
+                    <Input type="text" placeholder="Nome" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+                    <Input type="email" placeholder="E-mail" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <Input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <Button onClick={validation} className="button-style" id="button-register" text={'Criar conta'} />
                 </form>
             </div>
         </div>

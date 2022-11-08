@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Start from "./pages/Start";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Hall from "./pages/Hall";
@@ -14,7 +14,7 @@ function App() {
 
       <Routes>
         <Route exact path='/'>
-          <Home />
+          <Start />
         </Route>
 
         <Route path='/login'>
