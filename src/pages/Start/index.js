@@ -1,8 +1,9 @@
 import React from "react";
 import './style.css'
+import Button from "../../components/Button";
 import Logo from "../../components/Logo";
 
-function Home() {
+function Start() {
 
   function goToLogin() {
     window.open('/login', "_self")
@@ -11,10 +12,10 @@ function Home() {
     <div className="box-getstart">
       <Logo />
       <div className="container-getstart">
-        <button className="button-style" onClick={goToLogin}>Começar</button>
+        <Button className="button-style" onClick={goToLogin} text={'Começar'} />
       </div>
     </div>
   )
 }
 
-export default Home;
+export default Start;

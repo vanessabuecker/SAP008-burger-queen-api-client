@@ -2,6 +2,8 @@ import { React } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Nav from "../../components/Nav";
+import Input from "../../components/Input/Input";
+import Button from "../../components/Button";
 import { doLogin } from "../../Authentication/Auth";
 import { emailValidation, passwordValidation } from "../../Authentication/Auth";
 import './style.css'
@@ -44,7 +46,7 @@ function Login() {
 
     const validate = () => {
         if (!emailValidation(email)) {
-            alert('Digite um email válido.')
+            alert('Digite um e-mail válido.')
         }
         if (!passwordValidation(password)) {
             console.log('Digite uma senha válida.')
@@ -55,10 +57,10 @@ function Login() {
         <Nav />
         <div className="container-getstart">
             <form className="form-login" onSubmit={buttonEnter}>
-                <input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <Input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <Input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <div className="button-login-div">
-                    <button onClick={validate} className="button-style" id="button-login">Entrar</button>
+                    <Button onClick={validate} className="button-style" id="button-login" text={'Entrar'} />
                 </div>
             </form>
         </div>
