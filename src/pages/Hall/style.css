@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Quicksand:wght@300;400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 .menu {
-    width: 70%;
+    width: 90%;
     padding: 5px;
     margin: auto;
     background-color: rgb(246, 246, 246);
     border-radius: 10px;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 4.5%;
 }
 
 dl {
-    margin: 0 0 1em;
+    margin: 0;
     overflow: auto;
     width: 100%;
 }
@@ -22,6 +22,7 @@ dd.price {
     background-color: rgb(246, 246, 246);
     font-size: 1.3rem;
     font-weight: bold;
+    float: left;
     height: auto;
 }
 
@@ -36,29 +37,35 @@ dd {
 }
 
 dd.price {
-    color: #ffffff;
+    color: #1d1d1d;
     float: right;
     padding-left: 3px;
 }
 
 dd.ingredients {
-    color: rgb(155, 28, 14);
+    color: #a30808;
     font: italic 1.2em Georgia, Times, sans-serif;
     float: left;
-    padding: 2px 0;
-    width: 100%;
+    padding: 2px;
 }
 
 #price {
-    color: rgb(155, 28, 14);
+    color: #a30808;
+}
+
+.div-imgApi {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .imgApi {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    padding: 3px 2px 2px 3px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
     overflow: hidden;
+    margin-left: 15px;
+    border-radius: 50%;
 }
 
 #logo-menu {
@@ -67,29 +74,64 @@ dd.ingredients {
 
 #menu-title {
     font-size: 5rem;
-    font-weight: 700;
-    width: 28vw;
-    font-family: 'Monsieur La Doulaise';
-    background-color: rgb(255, 254, 253);
-    color: #1d1d1d;
+    font-weight: 500;
+    font-family: 'Bangers', cursive;
+    color:#a30808;
     border-radius: 40px;
 }
 
 .background-menu {
     width: 100%;
-    background-image: url('../../imgs/templatemenu.jpg');
-    border-top: 10px solid #0f0e0e;
 }
 
-.command-client{
+.test {
+    display: flex;
+    background-color: #ffc500;
+}
+
+.command-client {
     width: 100%;
-    height: 100%;
+    max-height: 35vh;
     font-size: 2rem;
     font-weight: 600;
-    padding-bottom: 5%;
+    margin: 2%;
     text-align: center;
-    background-color: white;
-    border: 5px solid black;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.input-background {
+    background-color: rgb(255, 255, 255);
+    padding-left: 1.8%;
+}
+
+.command-list {
+    text-align: start;
+    font-size: 1.5rem;
+}
+
+.add-button {
+    width: 35%;
+    height: 4vh;
+    background-color: #a30808;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#button-input {
+    width: 5%;
+    height: 6vh;
+    background-color: #a30808;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    float: right;
+    margin: 5px;
 }
 
 @media only screen and (max-width: 900px) and (min-width: 768px) {
@@ -109,4 +151,7 @@ dd.ingredients {
         font-size: 4rem;
     }
 
+    #button-input {
+        width: 10%;
+    }
 }

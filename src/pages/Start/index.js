@@ -12,7 +12,7 @@ function Start() {
     <div className="box-getstart">
       <Logo />
       <div className="container-getstart">
-        <Button className="button-style" onClick={goToLogin} text={'Começar'} />
+        <Button onClick={goToLogin} text={'Começar'} />
       </div>
     </div>
   )
