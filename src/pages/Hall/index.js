@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { token } from "../../Authentication/Token";
 import MenuItems from "../../components/Menu/MenuItems";
 import Menu from "../../components/Menu/Menu";
+import Input from "../../components/Input/Input";
 import './style.css'
+import CommandCard from "../../components/CommandCard/CommandCard";
 
 function Hall() {
 
@@ -30,11 +32,26 @@ function Hall() {
             .then((products) => setProducts(products))
     })
 
+    const [client, setClient] = useState();
+
+    function addName() {
+        
+    }
+
     return (
         <>
             <Menu />
-            <div className="background-menu">
-            {products.map(product => MenuItems(product))}
+            <div className="input-background">
+                <Input onChange={e => setClient(e.target.value)} type="text" placeholder="nome do cliente" />
+                <button id="button-input" onClick={addName}>OK</button>
+            </div>
+
+            <div className="test">
+                <CommandCard name={client} />
+                <div className="background-menu">
+                    {products.map(product => MenuItems(product))}
+                    <MenuItems />
+                </div>
             </div>
         </>
     )

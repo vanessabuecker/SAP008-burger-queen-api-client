@@ -60,7 +60,7 @@ function Login() {
                 <Input type="email" placeholder="Email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <Input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 <div className="button-login-div">
-                    <Button onClick={validate} className="button-style" id="button-login" text={'Entrar'} />
+                    <Button onClick={validate} id="button-login" text={'Entrar'} />
                 </div>
             </form>
         </div>

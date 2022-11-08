@@ -59,15 +59,15 @@ function Register() {
                 <form className="form" onSubmit={buttonSubmit}>
                     <div className="radio">
                         
-                        <Input type="radio" name="role" value="kitchen" id="kitchen" className="role" onChange={(e) => setRole(e.target.value)} />
+                        <Input type="radio" name="role" value="kitchen" id="kitchen" onChange={(e) => setRole(e.target.value)} />
                         <label htmlFor="kitchen">Cozinha</label>
-                        <Input type="radio" name="role" value="hall" id="hall" className="role" onChange={(e) => setRole(e.target.value)} />
+                        <Input type="radio" name="role" value="hall" id="hall" onChange={(e) => setRole(e.target.value)} />
                         <label htmlFor="hall">Atendimento</label>
                     </div>
                     <Input type="text" placeholder="Nome" name="name" value={name} onChange={(e) => setName(e.target.value)} />
                     <Input type="email" placeholder="E-mail" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                     <Input type="password" placeholder="Senha" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <Button onClick={validation} className="button-style" id="button-register" text={'Criar conta'} />
+                    <Button onClick={validation}  id="button-register" text={'Criar conta'} />
                 </form>
             </div>
         </div>

@@ -5,7 +5,7 @@ function Menu() {
 
     return (
         <div className="menu-name">
-            <p id='menu-title'> Cardápio  </p>
+            <p id='menu-title'> Menu  </p>
             <img id='logo-menu' src={logo} alt="Logo Mommy's Burger"></img>
         </div>
     )
