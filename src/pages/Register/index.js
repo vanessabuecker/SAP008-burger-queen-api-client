@@ -4,9 +4,8 @@ import { useState } from "react";
 import { createNewUser } from "../../Authentication/Auth";
 import Nav from "../../components/Nav";
 import Input from "../../components/Input/Input";
-import Button from "../../components/Button";
 import { emailValidation, passwordValidation } from "../../Authentication/Auth";
-
+import Button from "../../components/Button";
 import './style.css'
 
 function Register() {
@@ -31,11 +30,11 @@ function Register() {
                     localStorage.setItem("role", res.role);
 
                     if (res.role === "hall") {
-                        navigate("/homepage");
+                       navigate("/homepage");
                     }
 
                     else if (res.role === "kitchen") {
-                        navigate("/kitchen");
+                       navigate("/kitchen");
                     }
                 }
             })

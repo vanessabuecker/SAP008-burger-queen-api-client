@@ -13,7 +13,6 @@ export const createNewUser = async (name, email, password, role) => {
         }),
 
     }).then(res => res.json())
-        .then(json => console.log(json))
         .catch((error) => {
             alert(error);
         });

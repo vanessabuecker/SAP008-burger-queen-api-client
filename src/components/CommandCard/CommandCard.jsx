@@ -7,6 +7,7 @@ function CommandCard(props) {
             <div className="command-list">
                 Cliente: <span> {props.name} </span>
             </div>
+            <button className="add-button" onClick={props.onClick}> {props.text} </button>
         </div>
     )
 }

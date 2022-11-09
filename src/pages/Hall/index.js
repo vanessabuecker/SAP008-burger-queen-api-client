@@ -47,7 +47,7 @@ function Hall() {
             </div>
 
             <div className="test">
-                <CommandCard name={client} />
+                <CommandCard name={client} text={'Enviar Cozinha'}/>
                 <div className="background-menu">
                     {products.map(product => MenuItems(product))}
                     <MenuItems />
