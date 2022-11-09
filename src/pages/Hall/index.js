@@ -40,7 +40,7 @@ function Hall() {
 
     return (
         <>
-            <Menu />
+            <Menu text={"Menu"}/>
             <div className="input-background">
                 <Input onChange={e => setClient(e.target.value)} type="text" placeholder="nome do cliente" />
                 <button id="button-input" onClick={addName}>OK</button>
