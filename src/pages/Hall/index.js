@@ -8,7 +8,7 @@ import CommandCard from "../../components/CommandCard/CommandCard";
 
 function Hall() {
 
-    const baseUrl = 'https://lab-api-bq.herokuapp.com';
+    const baseUrl = 'https://lab-api-bq.onrender.com';
     const apiProducts = `${baseUrl}/products/`
     const getOptions = {
         method: "GET",
