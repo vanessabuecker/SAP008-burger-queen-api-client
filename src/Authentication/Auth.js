@@ -1,5 +1,5 @@
 export const createNewUser = async (name, email, password, role) => {
-    return await fetch("https://lab-api-bq.herokuapp.com/users", {
+    return await fetch("https://lab-api-bq.onrender.com/users", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -19,7 +19,7 @@ export const createNewUser = async (name, email, password, role) => {
 };
 
 export const doLogin = async (email, password) => {
-    return await fetch("https://lab-api-bq.herokuapp.com/auth", {
+    return await fetch("https://lab-api-bq.onrender.com/auth", {
         method: "POST",
         headers: {
             "Content-Type": "application/json; charset=UTF-8",
